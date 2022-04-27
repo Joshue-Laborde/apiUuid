@@ -10,7 +10,10 @@ const cors = require('cors');
 const app = express();
 app.use(helmet({contentSecurityPolicy: false}));  // Ayuda a proteger aplicaciones Express
 app.use(compression()); //ayuda a la respuesta del cliente sean más rapidas
-app.use(cors());
+app.use(cors()); //para que direccione con otros dominio
+
+
+
 
 // Servidor HTTP
 const serverHttp = http.createServer(app);
